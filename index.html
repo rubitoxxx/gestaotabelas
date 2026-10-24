@@ -1,0 +1,13 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DER — Gestao.fdb</title><link rel="stylesheet" href="style.css"></head><body>
+<aside id="side"><h1>DER · Gestao.fdb</h1>
+<input id="q" placeholder="Buscar tabela ou coluna…" autocomplete="off">
+<div class="row"><select id="mod"><option value="">Todos os prefixos</option></select>
+<select id="cls"><option value="">Classe A/B/C</option><option>A</option><option>B</option><option>C</option></select></div>
+<div id="cnt"></div><ul id="list"></ul></aside>
+<main><div id="bar"><label>Profundidade <select id="dep"><option>1</option><option>2</option></select></label>
+<label>Máx. vizinhas <input id="max" type="number" value="24" min="4" max="80"></label>
+<button id="fit">Ajustar</button><button id="eSVG">SVG</button><button id="ePNG">PNG</button><button id="eJSON">JSON</button><button id="eCSV">CSV FKs</button>
+<span class="lg"><i class="A"></i>A preservar <i class="B"></i>B limpar <i class="C"></i>C confirmar</span></div>
+<svg id="svg" role="img" aria-label="Diagrama interativo do banco de dados"><defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#667"/></marker></defs><g id="vp"></g></svg>
+<div id="info" aria-live="polite"></div></main><script src="dados.js"></script><script src="script.js"></script></body></html>

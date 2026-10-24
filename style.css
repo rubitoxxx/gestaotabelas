@@ -1,0 +1,16 @@
+:root{--bg:#f6f7f9;--pn:#fff;--tx:#1d2330;--mu:#6b7385;--ln:#d9dde5;--A:#2e7d5b;--B:#c0392b;--C:#d98a00}
+@media(prefers-color-scheme:dark){:root{--bg:#14171d;--pn:#1d222b;--tx:#e6e9ef;--mu:#98a0b2;--ln:#323947}}
+*{box-sizing:border-box}body{margin:0;display:flex;height:100vh;font:13px system-ui,sans-serif;background:var(--bg);color:var(--tx)}
+#side{width:300px;background:var(--pn);border-right:1px solid var(--ln);display:flex;flex-direction:column;padding:10px;gap:8px}
+h1{font-size:15px;margin:0}input,select,button{font:inherit;padding:5px 7px;border:1px solid var(--ln);border-radius:6px;background:var(--pn);color:var(--tx)}
+button{cursor:pointer}.row{display:flex;gap:6px}.row select{flex:1;min-width:0}#cnt{color:var(--mu);font-size:12px}
+#list{list-style:none;margin:0;padding:0;overflow:auto;flex:1}#list li{padding:4px 6px;cursor:pointer;border-radius:5px;display:flex;justify-content:space-between}
+#list li:hover,#list li.on{background:var(--bg)}#list b{font-weight:600;font-size:10px;padding:1px 5px;border-radius:8px;color:#fff}
+.A{background:var(--A)}.B{background:var(--B)}.C{background:var(--C)}
+main{flex:1;position:relative;overflow:hidden}#bar{position:absolute;top:8px;left:8px;right:8px;z-index:2;display:flex;gap:6px;flex-wrap:wrap;align-items:center;background:var(--pn);padding:6px 8px;border:1px solid var(--ln);border-radius:8px}
+#bar input{width:60px}.lg{margin-left:auto;color:var(--mu)}.lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 3px 0 8px}
+#svg{width:100%;height:100%;cursor:grab}#svg text{font:11px ui-monospace,monospace;fill:var(--tx)}
+.box{fill:var(--pn);stroke:var(--ln);stroke-width:1}.hd{stroke:none}.pk{font-weight:700}.ty{fill:var(--mu)!important}
+.node{cursor:pointer}.node:hover .box{stroke:#4a7bd0}.ed{stroke:#667;fill:none;stroke-width:1.2}.lb{fill:var(--mu)!important;font-size:9px!important}
+#info{position:absolute;bottom:8px;left:8px;max-width:420px;max-height:38%;overflow:auto;background:var(--pn);border:1px solid var(--ln);border-radius:8px;padding:8px 10px;display:none}
+#info h3{margin:0 0 4px;font-size:13px}#info p{margin:2px 0;color:var(--mu)}
