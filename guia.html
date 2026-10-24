@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f6fb" />
+    <title>Guia de uso · Gestão</title>
+    <link rel="stylesheet" href="guia.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Voltar ao mapa do banco">
+        <span class="brand-mark">G</span>
+        <span><strong>Gestão</strong><small>Central de operação</small></span>
+      </a>
+      <div class="top-actions">
+        <button id="printGuide" class="button button-quiet" type="button">
+          Imprimir guia
+        </button>
+        <a class="button button-primary" href="index.html"
+          >Abrir mapa do banco <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">GUIA PRÁTICO · ROTEIROS DE TRABALHO</p>
+          <h1>Aprenda o fluxo antes de operar.</h1>
+          <p class="hero-text">
+            Roteiros em ordem para cadastros, vendas, compras e financeiro.
+            Marque cada etapa enquanto acompanha o sistema.
+          </p>
+          <div class="hero-note">
+            <span aria-hidden="true">ⓘ</span
+            ><span
+              ><strong>Modo de treinamento:</strong> este guia não acessa nem
+              grava no Gestão.fdb. As marcações ficam salvas somente neste
+              navegador. Confirme nomes de menus e regras fiscais/financeiras
+              com a sua empresa.</span
+            >
+          </div>
+        </div>
+        <div class="progress-card" aria-live="polite">
+          <div class="progress-top">
+            <span>Seu progresso</span><strong id="progressText">0%</strong>
+          </div>
+          <div class="progress-track"><span id="progressBar"></span></div>
+          <p id="progressDetail">0 de 0 etapas concluídas</p>
+          <button id="resetProgress" class="text-button" type="button">
+            Limpar meu progresso
+          </button>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Roteiros de operação">
+        <aside class="catalog">
+          <label class="search-label" for="guideSearch"
+            >Buscar uma função</label
+          >
+          <input
+            id="guideSearch"
+            type="search"
+            placeholder="Ex.: venda, boleto, produto…"
+            autocomplete="off"
+          />
+          <div
+            id="categoryFilters"
+            class="category-filters"
+            aria-label="Filtrar por área"
+          ></div>
+          <p class="list-heading">ROTEIROS</p>
+          <nav
+            id="workflowList"
+            class="workflow-list"
+            aria-label="Lista de roteiros"
+          ></nav>
+          <p id="emptyList" class="empty-state" hidden>
+            Nenhum roteiro encontrado. Tente outro termo ou área.
+          </p>
+        </aside>
+
+        <article
+          id="workflowDetail"
+          class="detail"
+          aria-live="polite"
+        ></article>
+      </section>
+      <footer class="footer">
+        Guia educacional baseado na lista de operações fornecida e nos nomes das
+        tabelas disponíveis. Não substitui treinamento interno, validação
+        contábil/fiscal nem acesso autorizado ao ERP.
+      </footer>
+    </main>
+    <script src="dados.js"></script>
+    <script src="guia.js"></script>
+  </body>
+</html>
