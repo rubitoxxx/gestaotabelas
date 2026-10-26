@@ -26,11 +26,11 @@
     <main class="shell">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">GUIA PRÁTICO · ROTEIROS DE TRABALHO</p>
-          <h1>Aprenda o fluxo antes de operar.</h1>
+          <p class="eyebrow">GUIA PRÁTICO · TODAS AS TELAS DO MENU</p>
+          <h1>Aprenda a usar cada tela do Gestão.</h1>
           <p class="hero-text">
-            Roteiros em ordem para cadastros, vendas, compras e financeiro.
-            Marque cada etapa enquanto acompanha o sistema.
+            Catálogo montado a partir do menu padrão do sistema. Abra o módulo,
+            escolha a tela e siga o roteiro na mesma ordem do ERP.
           </p>
           <div class="hero-note">
             <span aria-hidden="true">ⓘ</span
@@ -62,22 +62,27 @@
           <input
             id="guideSearch"
             type="search"
-            placeholder="Ex.: venda, boleto, produto…"
+            placeholder="Ex.: venda rápida, boleto, inventário…"
             autocomplete="off"
           />
           <div
             id="categoryFilters"
             class="category-filters"
-            aria-label="Filtrar por área"
+            aria-label="Filtrar por menu"
           ></div>
-          <p class="list-heading">ROTEIROS</p>
+          <div
+            id="kindFilters"
+            class="category-filters kind-filters"
+            aria-label="Filtrar por tipo de tela"
+          ></div>
+          <p class="list-heading">TELAS DO SISTEMA <span id="listCount"></span></p>
           <nav
             id="workflowList"
             class="workflow-list"
-            aria-label="Lista de roteiros"
+            aria-label="Lista de telas do menu"
           ></nav>
           <p id="emptyList" class="empty-state" hidden>
-            Nenhum roteiro encontrado. Tente outro termo ou área.
+            Nenhuma tela encontrada. Tente outro termo, menu ou tipo.
           </p>
         </aside>
 
@@ -88,12 +93,13 @@
         ></article>
       </section>
       <footer class="footer">
-        Guia educacional baseado na lista de operações fornecida e nos nomes das
-        tabelas disponíveis. Não substitui treinamento interno, validação
-        contábil/fiscal nem acesso autorizado ao ERP.
+        Guia educacional gerado a partir de Gestao.menus.padrao. Não substitui
+        treinamento interno, validação contábil/fiscal nem acesso autorizado ao
+        ERP.
       </footer>
     </main>
     <script src="dados.js"></script>
+    <script src="menus.js"></script>
     <script src="guia.js"></script>
   </body>
 </html>
